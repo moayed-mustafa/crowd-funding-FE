@@ -1,0 +1,11 @@
+// This is where all my custom classes are going to live
+// Theme goes here
+
+// * get all the color values here from the style guide.md
+
+// overwrite theme variables here:-
+//* $primary: new color
+//* $secondary: new color
+
+// This import needs to be at the bottom of the page so that no conflict occures
+@import "~bootstrap/scss/bootstrap.scss"
