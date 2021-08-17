@@ -4,8 +4,20 @@
 // * get all the color values here from the style guide.md
 
 // overwrite theme variables here:-
-//* $primary: new color
-//* $secondary: new color
+ $primary: hsl(176, 50%, 47%);
+ $secondary: hsl(176, 72%, 28%);
+ $dark: hsl(0, 0%, 0%);
+ $light: hsl(0, 0%, 48%);
+//  $success: hsl(176, 72%, 28%);
+//  $info: hsl(176, 72%, 28%);
+//  $warning: hsl(176, 72%, 28%);
+//  $danger: hsl(176, 72%, 28%);
+
+
+.font-loader {
+  font-family: 'Commissioner';
+}
+
 
 // This import needs to be at the bottom of the page so that no conflict occures
 @import "~bootstrap/scss/bootstrap.scss"
