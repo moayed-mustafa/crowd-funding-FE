@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "./custom.scss";
+import "./index.css"
 import Navbar from "./components/navbar";
 import Overlay from "./components/overlay";
 import WebFont from "webfontloader";
@@ -18,11 +19,11 @@ function App() {
 		});
 	}, []);
 	return (
-		<Container>
+		<Container fluid>
 			<Row>
 				<Col xs={12}>
-					<Navbar />
 					<Overlay />
+					<Navbar  />
 					<HeaderCard />
 					<PleadgeCard />
 					<About

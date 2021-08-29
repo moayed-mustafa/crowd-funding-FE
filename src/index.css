@@ -11,3 +11,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.navbar-position{
+  position: absolute;
+  z-index: 1;
+  color:white;
+  top:50px;
+  left:50px;
+  width:100%;
+}
+.header-card-paper{
+  position:relative;
+  padding-top:24px;
+  padding-left:32px;
+  padding-right:32px;
+  padding-bottom:16px;
+  margin-top:-45px
+}
+.header-card-icon{
+  position:absolute;
+  left:45%;
+  top:-30px;
+}
+
