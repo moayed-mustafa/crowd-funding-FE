@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, Image } from "react-bootstrap";
+import {Image } from "react-bootstrap";
 
 import desktopOverlay from "../../assets/images/image-hero-desktop.jpg";
 import "../../index.css";
@@ -7,11 +7,7 @@ import "../../index.css";
 
 const Overlay = () => {
 	return (
-        <Row>
-            <Col xs={12}>
-			<Image fluid src={desktopOverlay} ></Image>
-            </Col>
-		</Row>
+			<Image fluid src={desktopOverlay}></Image>
 	);
 };
 

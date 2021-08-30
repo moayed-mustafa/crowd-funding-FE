@@ -1,8 +1,17 @@
-import React from 'react';
-import { Button } from "react-bootstrap";
+import React from "react";
+import "../../index.css";
+import BookmarkIcon from '@material-ui/icons/Bookmark';
 
 const BookmarkButton = () => {
-    return (<Button variant="light">Bookmark</Button> );
-}
+	return (
+		// <Button className="special-button" variant="light">Bookmark</Button>
+		<div className="special-button">
+            <div className="bookmark-icon">
+                <BookmarkIcon className="icon"/>
+            </div>
+			<button className="bookmark-btn">Bookmark</button>
+		</div>
+	);
+};
 
 export default BookmarkButton;

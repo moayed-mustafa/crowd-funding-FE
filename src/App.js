@@ -22,6 +22,8 @@ function App() {
 		<Container fluid>
 			<Row>
 				<Col xs={12}>
+		<div className="main-container">
+
 					<Overlay />
 					<Navbar  />
 					<HeaderCard />
@@ -58,10 +60,12 @@ function App() {
   										to our Backer member list. Shipping is included."
 						amountLeft='0'
 						buttonText='Select Reward'
-					/>
-				</Col>
-			</Row>
-		</Container>
+			/>
+		</div>
+
+		 		</Col>
+		 	</Row>
+		 </Container>
 	);
 }
 

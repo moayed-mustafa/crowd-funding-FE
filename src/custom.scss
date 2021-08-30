@@ -17,6 +17,11 @@
 .font-loader {
   font-family: 'Commissioner';
 }
+.main-container{
+  display: flex;
+  flex-direction: column;
+  outline:solid 1px blue;
+}
 
 
 // This import needs to be at the bottom of the page so that no conflict occures

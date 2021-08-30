@@ -31,5 +31,42 @@ code {
   position:absolute;
   left:45%;
   top:-30px;
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
 }
 
+.buttons-box{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+}
+.special-button{
+  display:flex;
+  position:relative;
+}
+.bookmark-icon{
+  width:50px;
+  height:50px;
+  border-radius: 50px;
+  background-color:hsl(0, 0%, 48%);
+  z-index: 1;
+  margin-right:-30px;
+  display: flex;
+  align-items:center;
+  justify-content:center;
+}
+.bookmark-btn{
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  width:150px;
+  border:transparent;
+  color:rgb(9, 9, 9);
+  /* background-color:hsl(0, 0%, 48%); */
+
+}
+.icon{
+  color:lightgray;
+}

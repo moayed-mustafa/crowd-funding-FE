@@ -10,7 +10,7 @@ import mastercraftLogo from "../../assets/images/logo-mastercraft.svg";
 const HeaderCard = () => {
 	return (
 		<Row className='justify-content-center'>
-			<Col xs={6}>
+			<Col xs={12} sm={5}>
 				<Paper className='header-card-paper'>
 					<Image src={mastercraftLogo} className='header-card-icon'></Image>
 					<h2 className='mt-2'>Mastercraft Bamboo Monitor Riser</h2>
@@ -18,14 +18,15 @@ const HeaderCard = () => {
 						A beautiful & handcrafted monitor stand to reduce neck and eye
 						strain
 					</p>
-					<Row className="jusftify-content-between">
-						<Col xs={3}>
-							<BookmarkButton></BookmarkButton>
-						</Col>
-						<Col xs={3}>
+
+					<div className='buttons-box'>
+						<div>
 							<PrimaryButton text='Back This Project'></PrimaryButton>
-						</Col>
-					</Row>
+						</div>
+						<div>
+							<BookmarkButton></BookmarkButton>
+						</div>
+					</div>
 				</Paper>
 			</Col>
 		</Row>
