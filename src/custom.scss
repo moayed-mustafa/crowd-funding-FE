@@ -20,7 +20,9 @@
 .main-container{
   display: flex;
   flex-direction: column;
-  outline:solid 1px blue;
+  overflow-x: hidden;
+  // background-color: hsla(1, 90%, 95%, 0) !important;
+  background-color: #f9f9f9!important;
 }
 
 

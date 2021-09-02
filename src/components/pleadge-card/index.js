@@ -9,7 +9,7 @@ const PleadgeCard = () => {
 	return (
 		<Row className={`justify-content-center mt-3`}>
 			<Col xs={12} sm={5}>
-				<Paper>
+				<Paper elevation={0}>
 					<div className='pledge-card-container'>
 						<FigureInformaiton
 							figure='$89,914'

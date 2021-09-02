@@ -11,7 +11,7 @@ const HeaderCard = () => {
 	return (
 		<Row className='justify-content-center'>
 			<Col xs={12} sm={5}>
-				<Paper className='header-card-paper'>
+				<Paper className='header-card-paper' elevation={0}>
 					<Image src={mastercraftLogo} className='header-card-icon'></Image>
 					<h3 className={`mt-2 header-3`}>Mastercraft Bamboo Monitor Riser</h3>
 					<p className={`paragraph`}>
