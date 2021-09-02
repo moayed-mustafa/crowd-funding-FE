@@ -13,8 +13,8 @@ const HeaderCard = () => {
 			<Col xs={12} sm={5}>
 				<Paper className='header-card-paper'>
 					<Image src={mastercraftLogo} className='header-card-icon'></Image>
-					<h2 className='mt-2'>Mastercraft Bamboo Monitor Riser</h2>
-					<p>
+					<h3 className={`mt-2 header-3`}>Mastercraft Bamboo Monitor Riser</h3>
+					<p className={`paragraph`}>
 						A beautiful & handcrafted monitor stand to reduce neck and eye
 						strain
 					</p>

@@ -21,11 +21,12 @@ code {
 }
 .header-card-paper{
   position:relative;
-  padding-top:24px;
-  padding-left:32px;
-  padding-right:32px;
-  padding-bottom:16px;
-  margin-top:-45px
+  padding-top:32px;
+  padding-left:64px;
+  padding-right:64px;
+  padding-bottom:32px;
+  margin-top:-45px;
+  box-sizing:border-box;
 }
 .header-card-icon{
   position:absolute;
@@ -51,7 +52,7 @@ code {
   width:50px;
   height:50px;
   border-radius: 50px;
-  background-color:hsl(0, 0%, 48%);
+  background-color:hsl(165, 7%, 11%);
   z-index: 1;
   margin-right:-30px;
   display: flex;
@@ -63,10 +64,60 @@ code {
   border-bottom-right-radius: 50px;
   width:150px;
   border:transparent;
-  color:rgb(9, 9, 9);
-  /* background-color:hsl(0, 0%, 48%); */
+  color:hsl(0, 2%, 64%);
+  font-weight:bold;
+  font-size:16px;
+  padding-left:16px;
 
 }
 .icon{
-  color:lightgray;
+  color:hsl(0, 2%, 64%);
+}
+.btn-rounded{
+  border-radius: 50px !important;
+}
+.btn-text{
+  color:white !important;
+  font-size:16px !important;
+  font-weight:bold !important;
+
+}
+
+.paragraph{
+  padding:8px;
+  width:100%;
+  margin-left:-24px;
+  white-space:nowrap;
+  color:hsl(0, 2%, 64%);
+}
+.header-3{
+  text-align:center;
+}
+.pledge-card-container{
+  display: flex;
+  justify-content:space-evenly;
+  align-items:center;
+  padding:16px;
+
+}
+.pleadge-info{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  padding:8px;
+}
+.pledge-card-divider{
+  height:80px !important;
+  background-color:hsl(0, 2%, 64%);
+  width:2px;
+}
+.progress-card{
+    padding-top: 8px;
+    padding-right: 64px;
+    padding-bottom: 20px;
+    padding-left: 64px;
+}
+.progress{
+  border-radius: 50px !important;
 }

@@ -4,7 +4,6 @@ import BookmarkIcon from '@material-ui/icons/Bookmark';
 
 const BookmarkButton = () => {
 	return (
-		// <Button className="special-button" variant="light">Bookmark</Button>
 		<div className="special-button">
             <div className="bookmark-icon">
                 <BookmarkIcon className="icon"/>
