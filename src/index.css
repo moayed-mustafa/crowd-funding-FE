@@ -112,6 +112,7 @@ display:flex;
 }
 .btn-rounded {
 	border-radius: 50px !important;
+  margin-right:4px;
 }
 .btn-style {
 	color: white !important;
@@ -146,6 +147,12 @@ display:flex;
 	height: 80px !important;
 	background-color: hsl(0, 2%, 64%);
 	width: 2px;
+  border:0;
+}
+.horizontal-break{
+  width:100px;
+  margin:auto;
+  margin-top:-10px;
 }
 .progress-card {
 	padding-top: 8px;
@@ -174,6 +181,7 @@ display:flex;
 	display: flex;
 	flex-direction: column;
 }
+
 .flex-box {
 	display: flex;
 	justify-content: space-between;
