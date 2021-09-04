@@ -13,7 +13,7 @@ const HeaderCard = () => {
 	const mobile = useMediaQuery("(max-width:375px)");
 	return (
 		<Row className='justify-content-center'>
-			<Col xs={11} md={9} sm={5}>
+			<Col xs={11} md={9} sm={5} lg={9} xl={5}>
 				<Paper elevation={0}>
 					<div className='header-card-paper'>
 						<Image src={mastercraftLogo} className='header-card-icon'></Image>

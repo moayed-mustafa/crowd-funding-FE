@@ -8,7 +8,7 @@ import "../../index.css";
 const InfoEditionWrapper = () => {
 	return (
 		<Row className={`justify-content-center mt-3`}>
-			<Col xs={11} md={9} sm={5}>
+			<Col xs={11} md={9} sm={5} lg={9} xl={5}>
 				<Paper elevation={0}>
 					<div className='info-edition-container'>
 						<About

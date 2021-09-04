@@ -12,7 +12,7 @@ const PleadgeCard = () => {
 
 	return (
 		<Row className={`justify-content-center mt-3`}>
-			<Col xs={11} md={9} sm={5}>
+			<Col xs={11} lg={9} xl={5} md={9} sm={5}>
 				<Paper elevation={0}>
 					{!isMobile ? (
 						<>
