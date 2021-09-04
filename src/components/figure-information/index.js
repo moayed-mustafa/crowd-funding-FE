@@ -1,5 +1,4 @@
 import React from "react";
-// import { Divider } from "@material-ui/core"
 import "../../index.css";
 
 const FigureInformaiton = ({ figure, information }) => {
@@ -7,7 +6,6 @@ const FigureInformaiton = ({ figure, information }) => {
         <div className="pleadge-info">
             <h2>{figure}</h2>
             <p  className="paragraph" > {information}</p>
-            {/* <Divider></Divider> */}
         </div>
     );
 }

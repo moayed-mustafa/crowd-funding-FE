@@ -24,8 +24,8 @@ const PleadgeCard = () => {
 							figure='56'
 							information='days left'></FigureInformaiton>
 					</div>
-					<div className="progress-card">
-						<ProgressBar className="progress" now={60}></ProgressBar>
+					<div className='progress-card'>
+						<ProgressBar className='progress' now={60}></ProgressBar>
 					</div>
 				</Paper>
 			</Col>

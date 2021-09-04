@@ -1,7 +1,6 @@
 import React from "react";
 import PrimaryButton from "../primary-button";
 import { Row, Col} from "react-bootstrap";
-// import {Backdrop} from '@material-ui/core';
 import "../../index.css"
 const ProductEdition = ({
 	product,
@@ -13,7 +12,6 @@ const ProductEdition = ({
 	return (
 		<Row>
 			<Col xs={12}>
-				{/* <Backdrop style={{color:"black"}} open> */}
 				<div className='product-container'>
 					<div className="flex-box">
 						<h5>{product}</h5>
@@ -34,7 +32,6 @@ const ProductEdition = ({
 					</div>
 				</div>
 
-				{/* </Backdrop> */}
 			</Col>
 		</Row>
 	);

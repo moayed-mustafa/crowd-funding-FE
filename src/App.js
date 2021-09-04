@@ -17,7 +17,7 @@ function App() {
 		});
 	}, []);
 	return (
-		<Container fluid>
+		<Container fluid className="fluid-container">
 			<Row>
 				<Col xs={12}>
 					<div className='main-container'>
