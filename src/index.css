@@ -1,153 +1,161 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
 }
-.navbar-position{
-  position: absolute;
-  z-index: 1;
-  color:white;
-  top:50px;
-  left:50px;
-  width:100%;
+.navbar-position {
+	position: absolute;
+	z-index: 1;
+	color: white;
+	top: 50px;
+	left: 50px;
+	width: 100%;
 }
-.header-card-paper{
-  position:relative;
-  padding-top:32px;
-  padding-left:64px;
-  padding-right:64px;
-  padding-bottom:32px;
-  margin-top:-45px;
-  box-sizing:border-box;
+.header-card-paper {
+	position: relative;
+	padding-top: 32px;
+	padding-bottom: 32px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
-.header-card-icon{
-  position:absolute;
-  left:45%;
-  top:-30px;
-  display:flex;
-  flex-direction: column;
-  justify-content:center;
-  align-items:center;
+.header-card-icon {
+	position: absolute;
+	left: 45%;
+	top: -30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
-.buttons-box{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+.buttons-box {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.mobile-buttons-box {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  width: 100%;
 
 }
-.special-button{
-  display:flex;
-  position:relative;
+.special-button {
+	display: flex;
+	position: relative;
 }
-.bookmark-icon{
-  width:50px;
-  height:50px;
-  border-radius: 50px;
-  background-color:hsl(165, 7%, 11%);
-  z-index: 1;
-  margin-right:-30px;
+.bookmark-icon {
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
+	background-color: hsl(165, 7%, 11%);
+	z-index: 1;
+	margin-right: -30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.bookmark-btn {
+	border-top-right-radius: 50px;
+	border-bottom-right-radius: 50px;
+	width: 150px;
+	border: transparent;
+	color: hsl(0, 2%, 64%);
+	font-weight: bold;
+	font-size: 16px;
+	padding-left: 16px;
+}
+.icon {
+	color: hsl(0, 2%, 64%);
+}
+.btn-rounded {
+	border-radius: 50px !important;
+}
+.btn-style {
+	color: white !important;
+	font-size: 16px !important;
+	font-weight: bold !important;
+	height: 50px;
+}
+
+.paragraph {
+	/* padding:8px; */
+	/* width:100%; */
+	/* margin-left:-24px; */
+	/* white-space:nowrap; */
+	color: hsl(0, 2%, 64%);
+}
+.description-paragraph {
+	color: hsl(0, 2%, 64%);
+}
+.header-3 {
+	text-align: center;
+}
+.pledge-card-container {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	padding: 16px;
+}
+.pleadge-info {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 8px;
+}
+.pledge-card-divider {
+	height: 80px !important;
+	background-color: hsl(0, 2%, 64%);
+	width: 2px;
+}
+.progress-card {
+	padding-top: 8px;
+	padding-right: 64px;
+	padding-bottom: 20px;
+	padding-left: 64px;
+}
+.progress {
+	border-radius: 50px !important;
+}
+.info-edition-container {
+	display: flex;
+	flex-direction: column;
+	padding: 32px;
+	margin-bottom: 4px;
+}
+
+.product-container {
+	border: solid 1px hsl(0, 2%, 64%);
+	border-radius: 5px;
+	margin-bottom: 8px;
+	padding-top: 32px;
+	padding-bottom: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	display: flex;
+	flex-direction: column;
+}
+.flex-box {
+	display: flex;
+	justify-content: space-between;
+}
+.pledge-money {
+	color: hsl(176, 50%, 47%);
+}
+.amount-left{
   display: flex;
-  align-items:center;
-  justify-content:center;
-}
-.bookmark-btn{
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
-  width:150px;
-  border:transparent;
-  color:hsl(0, 2%, 64%);
-  font-weight:bold;
-  font-size:16px;
-  padding-left:16px;
 
-}
-.icon{
-  color:hsl(0, 2%, 64%);
-}
-.btn-rounded{
-  border-radius: 20px !important;
-}
-.btn-text{
-  color:white !important;
-  font-size:16px !important;
-  font-weight:bold !important;
-
-}
-
-.paragraph{
-  padding:8px;
-  width:100%;
-  margin-left:-24px;
-  white-space:nowrap;
-  color:hsl(0, 2%, 64%);
-}
-.description-paragraph{
-  color:hsl(0, 2%, 64%);
-
-}
-.header-3{
-  text-align:center;
-}
-.pledge-card-container{
-  display: flex;
-  justify-content:space-evenly;
-  align-items:center;
-  padding:16px;
-
-}
-.pleadge-info{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-direction:column;
-  padding:8px;
-}
-.pledge-card-divider{
-  height:80px !important;
-  background-color:hsl(0, 2%, 64%);
-  width:2px;
-}
-.progress-card{
-    padding-top: 8px;
-    padding-right: 64px;
-    padding-bottom: 20px;
-    padding-left: 64px;
-}
-.progress{
-  border-radius: 50px !important;
-}
-.info-edition-container{
-  display:flex;
-  flex-direction:column;
-  padding:32px;
-  margin-bottom:4px;
-}
-
-.product-container{
-  border:solid 1px hsl(0, 2%, 64%);
-  border-radius: 5px;
-  margin-bottom: 8px;
-  padding-top:32px;
-  padding-bottom:8px;
-  padding-left:16px;
-  padding-right:16px;
-  display:flex;
-  flex-direction:column;
-}
-.flex-box{
-  display:flex;
-  justify-content:space-between;
-
-}
-.pledge-money{
-  color:hsl(176, 50%, 47%);
 }

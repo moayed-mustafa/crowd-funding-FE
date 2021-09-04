@@ -25,8 +25,7 @@ function App() {
 						<Navbar />
 						<HeaderCard />
 						<PleadgeCard />
-						<InfoEditionWrapper/>
-
+						<InfoEditionWrapper />
 					</div>
 				</Col>
 			</Row>

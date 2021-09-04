@@ -2,10 +2,7 @@ import React from "react";
 import PrimaryButton from "../primary-button";
 import { Row, Col} from "react-bootstrap";
 // import {Backdrop} from '@material-ui/core';
-
-
 import "../../index.css"
-
 const ProductEdition = ({
 	product,
 	pleadgeAmount,
@@ -26,9 +23,13 @@ const ProductEdition = ({
 						<p className="description-paragraph">{description}</p>
 					</div>
 					<div className="flex-box">
+						<span className="amount-left">
 						<h4>
-							{amountLeft} <p>Left</p>{" "}
-						</h4>
+							{amountLeft}
+							</h4>
+						<p className="paragraph">left</p>{" "}
+
+						</span>
 						<PrimaryButton text={buttonText}></PrimaryButton>
 					</div>
 				</div>

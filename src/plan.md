@@ -9,4 +9,13 @@
  - Product edition card.
 
 
+ # Remaining work items:
+- Mobile menu.
+- Mobile overlay image.
+- Mobile pledge card.
+- Mobile header card.
+
+- Pop ups (Desktop and Mobile).
+- Active states.
+
 
