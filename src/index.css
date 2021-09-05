@@ -86,6 +86,16 @@ display:flex;
 	display: flex;
 	position: relative;
 }
+.special-button:hover .bookmark-btn {
+	color:hsl(176, 50%, 47%);;
+}
+.special-button:hover .bookmark-icon {
+	background-color:hsl(176, 50%, 47%);
+}
+.special-button:hover .icon {
+	color:white
+}
+
 .bookmark-icon {
 	width: 50px;
 	height: 50px;

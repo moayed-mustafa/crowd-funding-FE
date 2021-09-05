@@ -8,6 +8,7 @@ import HeaderCard from "./components/header-card";
 import PleadgeCard from "./components/pleadge-card";
 import InfoEditionWrapper from "./components/info-edition-wrapper";
 import { Container, Row, Col } from "react-bootstrap";
+import { useDidMount } from "rooks";
 function App() {
 	useEffect(() => {
 		WebFont.load({
@@ -16,6 +17,9 @@ function App() {
 			},
 		});
 	}, []);
+	useDidMount(() => {
+		console.log("The component is mounted!");
+	})
 	return (
 		<Container fluid className="fluid-container">
 			<Row>

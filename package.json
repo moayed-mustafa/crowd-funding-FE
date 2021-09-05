@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "-": "0.0.1",
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
     "bootstrap": "^5.1.0",
@@ -14,6 +15,8 @@
     "react-dom": "^17.0.2",
     "react-reveal": "^1.2.2",
     "react-scripts": "4.0.3",
+    "rooks": "^5.7.0",
+    "s": "^1.0.0",
     "webfontloader": "^1.6.28"
   },
   "scripts": {
@@ -41,6 +44,7 @@
     ]
   },
   "devDependencies": {
+    "eslint-plugin-react-hooks": "^4.2.0",
     "web-vitals": "^2.1.0"
   }
 }

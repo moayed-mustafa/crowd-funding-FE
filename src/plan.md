@@ -10,7 +10,11 @@
 
 
  # Remaining work items:
-- Pop ups (Desktop and Mobile).
+- Active state.
+- modal default (Desktop).
+- modal default (Mobile).
+- modal completed(Desktop).
+- modal completed(Mobile).
 - Active states.
 
 
