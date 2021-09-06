@@ -1,20 +1,13 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
-import { Radio } from "@material-ui/core";
-import { withStyles } from "@material-ui/core/styles";
+import StyledRadio from "../styled-material-ui/syteld-radio"
 import { useMediaQuery } from "@material-ui/core";
+import PrimaryButton from "../primary-button";
+import PleadgeButton from "../pleadge-button";
+
 import clsx from "clsx";
 import "../../index.css";
-
-const StyledRadio = withStyles({
-	root: {
-		color: "hsl(0, 2%, 64%)",
-		"&$checked": {
-			color: "hsl(176, 50%, 47%)",
-		},
-	},
-	checked: {},
-})((props) => <Radio color='default' {...props} />);
+import MobilePledgeCard from "./mobile-modal-pledge-card";
 
 const ModalPleadgeCard = ({
 	val,
@@ -25,7 +18,8 @@ const ModalPleadgeCard = ({
 	itemsLeft,
 	description,
 }) => {
-	const isMobile = useMediaQuery("(max-width:375px)");
+    const isMobile = useMediaQuery("(max-width:375px)");
+    console.log("amount pleadge:", amount)
 
 	return (
 		<Row>
@@ -49,12 +43,14 @@ const ModalPleadgeCard = ({
 									<h6>{title}</h6>
 									<p className='pledge-money'>{amount}</p>
 								</div>
-								{itemsLeft && <div className='flex-box'>
-									<span className='amount-left'>
-										<h6>{itemsLeft}</h6>
-										<p className='paragraph'>left</p>{" "}
-									</span>
-								</div>}
+								{itemsLeft && (
+									<div className='flex-box'>
+										<span className='amount-left'>
+											<h6>{itemsLeft}</h6>
+											<p className='paragraph'>left</p>{" "}
+										</span>
+									</div>
+								)}
 							</div>
 							<div>
 								<p className='description-paragraph'> {description}</p>
@@ -62,31 +58,30 @@ const ModalPleadgeCard = ({
 						</>
 					) : (
 						// ? / Mobile Card
-						<div className='modal-pleadge-mobile'>
-							<div className='modal-info-box'>
-								<StyledRadio
-									checked={state === val}
-									onChange={handleSelect}
-									value={val}
-									name='radio-button'
-								/>
-								<h6>{title}</h6>
-							</div>
-							<p className='pledge-money'>{amount}</p>
-							<div>
-								<p className='description-paragraph'> {description}</p>
-							</div>
-							{itemsLeft && <div className='flex-box'>
-									<span className='amount-left'>
-										<h6>{itemsLeft}</h6>
-										<p className='paragraph'>left</p>{" "}
-									</span>
-								</div>}
-						</div>
+						<MobilePledgeCard
+							val={val}
+							handleSelect={handleSelect}
+							state={state}
+							title={title}
+							amount={amount}
+							itemsLeft={itemsLeft}
+							description={description}
+						/>
 					)}
+                    {/* based on Radio click state shows: typography, pleadge amount button, contitue button */}
+                    {
+                        state === val &&
+                        <>
+                            <hr></hr>
+                        <div className='modal-pleadge-done'>
+                            <p >Enter your pleadge</p>
+                            {amount && <PleadgeButton amount={amount}/>}
+								<PrimaryButton text='Continue'></PrimaryButton>
 
-					{/* based on Radio click state shows: typography, pleadge amount button, contitue button */}
-					<div className='modal-pleadge-done'></div>
+                        </div>
+                        </>
+
+                    }
 				</div>
 			</Col>
 		</Row>

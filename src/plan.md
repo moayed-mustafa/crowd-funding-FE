@@ -10,9 +10,9 @@
 
 
  # Remaining work items:
-- modal default (Desktop).
-- modal default (Mobile).
-- modal completed(Desktop).
-- modal completed(Mobile).
+- pleadge box mobile.
+- pleadge done modal (Desktop).
+- pleadge done modal (Mobile).
+- product state.
 
 

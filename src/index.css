@@ -19,34 +19,32 @@ code {
 	left: 50px;
 	width: 100%;
 }
-.navbar-position-mobile{
-  position: absolute;
+.navbar-position-mobile {
+	position: absolute;
 	z-index: 1;
 	width: 99%;
-  display:flex ;
-justify-content: space-around;
+	display: flex;
+	justify-content: space-around;
 }
-.menu-container{
-display:flex;
-  justify-content:center;
-  align-items: center;
-  transition: all ease-in-out 2s;
-
+.menu-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all ease-in-out 2s;
 }
-.mobile-menu{
-  position: absolute;
+.mobile-menu {
+	position: absolute;
 	z-index: 1;
-  width:75%;
-  top:30px;
-  transition: all ease-in-out 2s;
+	width: 75%;
+	top: 30px;
+	transition: all ease-in-out 2s;
 }
-.list-item-style{
-  padding:12px !important;
+.list-item-style {
+	padding: 12px !important;
 }
 
-.ham-menu{
-  align-self: flex-end !important;
-
+.ham-menu {
+	align-self: flex-end !important;
 }
 .header-card-paper {
 	position: relative;
@@ -55,7 +53,7 @@ display:flex;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-  margin-top:-40px;
+	margin-top: -40px;
 }
 .header-card-icon {
 	position: absolute;
@@ -71,29 +69,28 @@ display:flex;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-  width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
+	width: 100%;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 .mobile-buttons-box {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-  width: 100%;
-
+	width: 100%;
 }
 .special-button {
 	display: flex;
 	position: relative;
 }
 .special-button:hover .bookmark-btn {
-	color:hsl(176, 50%, 47%);;
+	color: hsl(176, 50%, 47%);
 }
 .special-button:hover .bookmark-icon {
-	background-color:hsl(176, 50%, 47%);
+	background-color: hsl(176, 50%, 47%);
 }
 .special-button:hover .icon {
-	color:white
+	color: white;
 }
 
 .bookmark-icon {
@@ -122,13 +119,22 @@ display:flex;
 }
 .btn-rounded {
 	border-radius: 50px !important;
-  margin-right:4px;
+	margin-right: 4px;
 }
 .btn-style {
 	color: white !important;
 	font-size: 16px !important;
 	font-weight: bold !important;
 	height: 50px;
+}
+.pleadge-btn-style {
+	color: black !important;
+	background-color: white !important;
+	border-color: hsl(0, 2%, 64%);
+	font-size: 16px !important;
+	font-weight: bold !important;
+	height: 50px;
+	width: 100px;
 }
 
 .paragraph {
@@ -157,12 +163,12 @@ display:flex;
 	height: 80px !important;
 	background-color: hsl(0, 2%, 64%);
 	width: 2px;
-  border:0;
+	border: 0;
 }
-.horizontal-break{
-  width:100px;
-  margin:auto;
-  margin-top:-10px;
+.horizontal-break {
+	width: 100px;
+	margin: auto;
+	margin-top: -10px;
 }
 .progress-card {
 	padding-top: 8px;
@@ -210,37 +216,44 @@ display:flex;
 .pledge-money {
 	color: hsl(176, 50%, 47%);
 }
-.amount-left{
-  display: flex;
-
+.amount-left {
+	display: flex;
 }
-.close-icon{
-	color:hsl(0, 2%, 64%);
+.close-icon {
+	color: hsl(0, 2%, 64%);
 }
-.modal-pleadge-main{
+.modal-pleadge-main {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
-.modal-pleadge-mobile{
+.modal-pleadge-mobile {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: start;
 }
-.modal-info-box{
+.modal-info-box {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding-top:8px;
+	padding-top: 8px;
 	padding-bottom: 8px;
 }
-.modal-info-box p{
+.modal-info-box p {
 	margin: auto;
-	padding-left:16px;
+	padding-left: 16px;
 }
-.modal-info-box h6{
+.modal-info-box h6 {
 	margin: auto;
 }
-
+.modal-pleadge-done {
+	display: flex;
+	justify-content: start;
+}
+.modal-pleadge-done p {
+	flex-grow: 1;
+	color: hsl(0, 2%, 64%);
+	margin:auto;
+}
 
