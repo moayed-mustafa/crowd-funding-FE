@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Row, Col, Modal } from "react-bootstrap";
-// import ProductEdition from "../product-edition-card";
 import CloseIcon from "@material-ui/icons/Close";
 import ModalPleadgeCard from "../modal-pledge-card";
 
@@ -10,7 +9,6 @@ const ModalComponent = (props) => {
 	const [selected, setSelected] = useState("");
 	const handleChange = (e) => {
 		setSelected(e.target.value);
-		console.log("target value:", e.target.value);
 	};
 	// This will clear the selection on clicking continue button
 	// const clearRadioSelect = () => {
@@ -77,7 +75,6 @@ const ModalComponent = (props) => {
 							/>
 						</div>
 					</Modal.Body>
-					{/* <Modal.Footer></Modal.Footer> */}
 				</Modal>
 			</Col>
 		</Row>

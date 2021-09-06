@@ -216,6 +216,9 @@ code {
 .pledge-money {
 	color: hsl(176, 50%, 47%);
 }
+.pledge-money:hover {
+	color: hsl(176, 43%, 59%);
+}
 .amount-left {
 	display: flex;
 }
@@ -255,5 +258,27 @@ code {
 	flex-grow: 1;
 	color: hsl(0, 2%, 64%);
 	margin:auto;
+}
+.pleadge-input{
+	border: solid 1px hsl(0, 2%, 64%);
+	width:100px;
+	height:50px;
+	border-radius:50px;
+	text-align: center;
+
+}
+.pleadge-input input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.pleadge-input:focus{
+	outline-width: 0;
+	caret-color:hsl(176, 50%, 47%);
+}
+.continue-modal{
+	display: flex;
+	flex-direction:column;
+	align-items: center;
 }
 

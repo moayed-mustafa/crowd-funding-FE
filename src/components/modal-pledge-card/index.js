@@ -1,9 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 import { Row, Col } from "react-bootstrap";
-import StyledRadio from "../styled-material-ui/syteld-radio"
+import StyledRadio from "../styled-material-ui/syteld-radio";
 import { useMediaQuery } from "@material-ui/core";
 import PrimaryButton from "../primary-button";
 import PleadgeButton from "../pleadge-button";
+import FinalModal from "../final-modal"
 
 import clsx from "clsx";
 import "../../index.css";
@@ -18,8 +19,11 @@ const ModalPleadgeCard = ({
 	itemsLeft,
 	description,
 }) => {
-    const isMobile = useMediaQuery("(max-width:375px)");
-    console.log("amount pleadge:", amount)
+	const isMobile = useMediaQuery("(max-width:375px)");
+	const [openModal, setOpenModal] = useState(false);
+	const handleClick = () => {
+		setOpenModal(!openModal);
+	}
 
 	return (
 		<Row>
@@ -68,21 +72,19 @@ const ModalPleadgeCard = ({
 							description={description}
 						/>
 					)}
-                    {/* based on Radio click state shows: typography, pleadge amount button, contitue button */}
-                    {
-                        state === val &&
-                        <>
-                            <hr></hr>
-                        <div className='modal-pleadge-done'>
-                            <p >Enter your pleadge</p>
-                            {amount && <PleadgeButton amount={amount}/>}
-								<PrimaryButton text='Continue'></PrimaryButton>
-
-                        </div>
-                        </>
-
-                    }
+					{/* based on Radio click state shows: typography, pleadge amount button, contitue button */}
+					{state === val && (
+						<>
+							<hr></hr>
+							<div className='modal-pleadge-done'>
+								<p>Enter your pleadge</p>
+									{amount && <PleadgeButton amount={amount} />}
+									<PrimaryButton text='Continue' handleClick={handleClick}></PrimaryButton>
+							</div>
+						</>
+					)}
 				</div>
+				<FinalModal show={openModal}  handleClick={handleClick}/>
 			</Col>
 		</Row>
 	);
