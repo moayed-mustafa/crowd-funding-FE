@@ -10,11 +10,9 @@
 
 
  # Remaining work items:
-- Active state.
 - modal default (Desktop).
 - modal default (Mobile).
 - modal completed(Desktop).
 - modal completed(Mobile).
-- Active states.
 
 

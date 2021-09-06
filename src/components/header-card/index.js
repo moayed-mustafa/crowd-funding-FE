@@ -16,7 +16,6 @@ const HeaderCard = () => {
 	const [openModal, setOpenModal] = useState(false);
 	const handleOpenModal = () => {
 		setOpenModal(!openModal);
-		console.log("openModal:" , openModal);
 	}
 	return (
 		<Row className='justify-content-center'>
