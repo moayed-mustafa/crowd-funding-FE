@@ -10,8 +10,9 @@ const FinalModal = (props) => {
 				<Modal
 					{...props}
 					size='lg'
-					aria-labelledby='contained-modal-title-vcenter'
-					centered>
+					// aria-labelledby='contained-modal-title-vcenter'
+					// centered
+				>
 					<Modal.Body className="continue-modal">
 						<Image src={CheckIcon}></Image>
 						<h5>Thank you for your support</h5>

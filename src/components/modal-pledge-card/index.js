@@ -4,7 +4,6 @@ import StyledRadio from "../styled-material-ui/syteld-radio";
 import { useMediaQuery } from "@material-ui/core";
 import PrimaryButton from "../primary-button";
 import PleadgeButton from "../pleadge-button";
-
 import clsx from "clsx";
 import "../../index.css";
 import MobilePledgeCard from "./mobile-modal-pledge-card";
@@ -79,7 +78,7 @@ const ModalPleadgeCard = ({
 						</>
 					)}
 				</div>
-				{/* {children} */}
+				{children}
 			</Col>
 		</Row>
 	);

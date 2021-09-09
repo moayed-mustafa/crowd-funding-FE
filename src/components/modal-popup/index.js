@@ -1,6 +1,7 @@
 import React from "react";
 import { Row, Col, Modal } from "react-bootstrap";
 import CloseIcon from "@material-ui/icons/Close";
+
 import "../../index.css";
 const ModalComponent = (props) => {
 
@@ -26,6 +27,7 @@ const ModalComponent = (props) => {
 						</p>
 						<div className='info-edition-container'>
 							{props.children}
+
 						</div>
 					</Modal.Body>
 				</Modal>

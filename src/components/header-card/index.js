@@ -45,23 +45,25 @@ const ModalPleadgeData = [
 
 const HeaderCard = () => {
 	const mobile = useMediaQuery("(max-width:375px)");
-	// * main modal state
+	// ! main modal state
 	const [openModal, setOpenModal] = useState(false);
 	const handleOpenModal = () => {
 		setOpenModal(!openModal);
+		if (!openModal) setSelected("");
 	};
-	//* secondary modal state
+	//! secondary modal state
 	const [openThankyouModal, setOpenThankyouModal] = useState(false);
+	console.log("openModal state:", openModal);
+	console.log("openThankyouModal state:", openThankyouModal);
 	const handleOpenThankyouModal = () => {
 		setOpenThankyouModal(!openThankyouModal);
-		// if (openModal) {
-		// 	handleOpenModal();
-		// }
+		if (!openThankyouModal) setSelected("");
 	};
-	//* radio button state
+	//! radio button state
 	const [selected, setSelected] = useState("");
 	const handleChange = (e) => {
 		setSelected(e.target.value);
+		if (!openModal) setSelected("");
 	};
 	// TODO: make a function to clear the selected radio item
 
@@ -100,22 +102,21 @@ const HeaderCard = () => {
 			</Col>
 			<ModalComponent show={openModal} handleClick={handleOpenModal}>
 				{ModalPleadgeData.map((item, idx) => (
-					<>
-							<ModalPleadgeCard
-								key={idx}
-								val={item.val}
-								handleSelect={handleChange}
-								state={selected}
-								title={item.title}
-								description={item.description}
-								amount={item.amount}
-								itemsLeft={item.itemsLeft}
-								handleClick={handleOpenThankyouModal}></ModalPleadgeCard>
-							<FinalModal
-								show={openThankyouModal}
-								handleClick={handleOpenThankyouModal}
-							/>
-					</>
+					<ModalPleadgeCard
+						key={idx}
+						val={item.val}
+						handleSelect={handleChange}
+						state={selected}
+						title={item.title}
+						description={item.description}
+						amount={item.amount}
+						itemsLeft={item.itemsLeft}
+						handleClick={handleOpenThankyouModal}>
+						<FinalModal
+							show={openThankyouModal}
+							handleClick={handleOpenThankyouModal}
+						/>
+					</ModalPleadgeCard>
 				))}
 			</ModalComponent>
 		</Row>
