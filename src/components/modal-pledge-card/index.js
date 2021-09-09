@@ -1,10 +1,9 @@
-import React, {useState} from "react";
+import React from "react";
 import { Row, Col } from "react-bootstrap";
 import StyledRadio from "../styled-material-ui/syteld-radio";
 import { useMediaQuery } from "@material-ui/core";
 import PrimaryButton from "../primary-button";
 import PleadgeButton from "../pleadge-button";
-import FinalModal from "../final-modal"
 
 import clsx from "clsx";
 import "../../index.css";
@@ -18,13 +17,10 @@ const ModalPleadgeCard = ({
 	amount,
 	itemsLeft,
 	description,
+	children,
+	handleClick,
 }) => {
 	const isMobile = useMediaQuery("(max-width:375px)");
-	const [openModal, setOpenModal] = useState(false);
-	const handleClick = () => {
-		setOpenModal(!openModal);
-	}
-
 	return (
 		<Row>
 			<Col xs={12}>
@@ -72,7 +68,6 @@ const ModalPleadgeCard = ({
 							description={description}
 						/>
 					)}
-					{/* based on Radio click state shows: typography, pleadge amount button, contitue button */}
 					{state === val && (
 						<>
 							<hr></hr>
@@ -84,7 +79,7 @@ const ModalPleadgeCard = ({
 						</>
 					)}
 				</div>
-				<FinalModal show={openModal}  handleClick={handleClick}/>
+				{/* {children} */}
 			</Col>
 		</Row>
 	);

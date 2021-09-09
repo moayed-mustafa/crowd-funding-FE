@@ -10,10 +10,10 @@
 
 
  # Remaining work items:
-- pleadge box mobile.
-- pleadge done modal (Desktop).
-- pleadge done modal (Mobile).
-- product state. (Make a close modal state inside of header-card component, make it publick by using context and pass the setter state in the final modal and modal pledge card to control the state of the main modal being open).
-(as far as the pledge amounts converted into a state, you can control it from the info-edition-wrapper component and adjust it in children components)
+- My main work item for today is to use component composition to control the states of (pleadge modal & Thank you modal) from one source of truth and make one close as one opens.
+- Make a state for the pleadge data I have at the moment.
+- I want to be able to toggle the two states pn demand(pleadge modal & Thank you modal) basically, when I open the secondary modal, i want the main model to close.
+- I also want to clear up the radio button state once the Thank you component is closed
+
 
 
