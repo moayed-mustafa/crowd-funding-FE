@@ -7,7 +7,7 @@ import "../../index.css";
 const MobilePledgeCard = ({
 	val,
 	handleSelect,
-	state,
+	radioState,
 	title,
 	amount,
 	itemsLeft,
@@ -17,7 +17,7 @@ const MobilePledgeCard = ({
 		<div className='modal-pleadge-mobile'>
 			<div className='modal-info-box'>
 				<StyledRadio
-					checked={state === val}
+					checked={radioState === val}
 					onChange={handleSelect}
 					value={val}
 					name='radio-button'

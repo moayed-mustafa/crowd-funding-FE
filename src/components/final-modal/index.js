@@ -4,6 +4,7 @@ import CheckIcon from "../../assets/images/icon-check.svg";
 import PrimaryButton from "../primary-button"
 import "../../index.css";
 const FinalModal = (props) => {
+
 	return (
 		<Row>
 			<Col xs={10} lg={4}>

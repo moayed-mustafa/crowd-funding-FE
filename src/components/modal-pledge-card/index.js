@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Row, Col } from "react-bootstrap";
 import StyledRadio from "../styled-material-ui/syteld-radio";
 import { useMediaQuery } from "@material-ui/core";
@@ -7,26 +7,31 @@ import PleadgeButton from "../pleadge-button";
 import clsx from "clsx";
 import "../../index.css";
 import MobilePledgeCard from "./mobile-modal-pledge-card";
+import FinalModal from "../final-modal";
 
 const ModalPleadgeCard = ({
 	val,
 	handleSelect,
-	state,
+	radioState,
 	title,
 	amount,
 	itemsLeft,
 	description,
-	children,
-	handleClick,
+	setSelected,
 }) => {
 	const isMobile = useMediaQuery("(max-width:375px)");
+	const [openThankyouModal, setOpenThankyouModal] = useState(false);
+	const handleOpenThankyouModal = () => {
+		setOpenThankyouModal(!openThankyouModal);
+		if (!openThankyouModal) setSelected("");
+	};
 	return (
 		<Row>
 			<Col xs={12}>
 				<div
 					className={clsx([
-						state === val && "product-container-checked",
-						state !== val && "product-container",
+						radioState === val && "product-container-checked",
+						radioState !== val && "product-container",
 					])}>
 					{/* radio, title and pleadge amouunt and number of items left */}
 					{!isMobile ? (
@@ -34,7 +39,7 @@ const ModalPleadgeCard = ({
 							<div className='modal-pleadge-main'>
 								<div className='modal-info-box'>
 									<StyledRadio
-										checked={state === val}
+										checked={radioState === val}
 										onChange={handleSelect}
 										value={val}
 										name='radio-button'
@@ -60,25 +65,28 @@ const ModalPleadgeCard = ({
 						<MobilePledgeCard
 							val={val}
 							handleSelect={handleSelect}
-							state={state}
+							radioState={radioState}
 							title={title}
 							amount={amount}
 							itemsLeft={itemsLeft}
 							description={description}
 						/>
 					)}
-					{state === val && (
+					{radioState === val && (
 						<>
 							<hr></hr>
 							<div className='modal-pleadge-done'>
 								<p>Enter your pleadge</p>
 									{amount && <PleadgeButton amount={amount} />}
-									<PrimaryButton text='Continue' handleClick={handleClick}></PrimaryButton>
+									<PrimaryButton text='Continue' handleClick={handleOpenThankyouModal}></PrimaryButton>
 							</div>
 						</>
 					)}
 				</div>
-				{children}
+				<FinalModal
+							show={openThankyouModal}
+							handleClick={handleOpenThankyouModal}
+						/>
 			</Col>
 		</Row>
 	);

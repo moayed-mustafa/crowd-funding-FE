@@ -5,7 +5,8 @@ import { Paper } from "@material-ui/core";
 import { Row, Col } from "react-bootstrap";
 import "../../index.css";
 
-const InfoEditionWrapper = () => {
+
+const InfoEditionWrapper = ({productEditionData, updateTotalBackersAndTotalFunds}) => {
 	return (
 		<Row className={`justify-content-center mt-3`}>
 			<Col xs={11} md={9} sm={5} lg={9} xl={5}>
@@ -17,34 +18,20 @@ const InfoEditionWrapper = () => {
 										to a more comfortable viewing height. Placing your monitor at eye level has the potential to improve
 										your posture and make you more comfortable while at work, helping you stay focused on the task at hand.
 '
-                            secondaryTypography="
+							secondaryTypography='
 										Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your computer
-										to allow notepads, pens, and USB sticks to be stored under the stand."
+										to allow notepads, pens, and USB sticks to be stored under the stand.'
 						/>
-						<ProductEdition
-							product='Bamboo Stand'
-							pleadgeAmount='Pleadge $25 or more'
-							description="You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
-  										you’ll be added to a special Backer member list."
-							amountLeft='101'
-							buttonText='Select Reward'
-						/>
-						<ProductEdition
-							product='Black Edition Stand'
-							pleadgeAmount='Pleadge $75 or more'
-							description='You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
-  										member list. Shipping is included.'
-							amountLeft='64'
-							buttonText='Select Reward'
-						/>
-						<ProductEdition
-							product='Mahogny Speacial Edition'
-							pleadgeAmount='Pleadge $200 or more'
-							description='You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
-  										to our Backer member list. Shipping is included.'
-							amountLeft='0'
-							buttonText='Select Reward'
-						/>
+						{productEditionData.map((item, idx) => (
+							<ProductEdition
+								product={item.title}
+								pleadgeAmount={item.pleadgeAmount}
+								description={item.description}
+								amountLeft={item.amountLeft}
+								buttonText={item.buttonText}
+								updateTotalBackersAndTotalFunds={updateTotalBackersAndTotalFunds}
+							/>
+						))}
 					</div>
 				</Paper>
 			</Col>

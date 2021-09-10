@@ -7,7 +7,7 @@ import { useMediaQuery } from "@material-ui/core";
 import MobilePleadgeCard from "./mobile-pleadge-card";
 import "../../index.css";
 
-const PleadgeCard = () => {
+const PleadgeCard = ({fundsPleadged,totalBackers}) => {
 	const isMobile = useMediaQuery("(max-width:375px)");
 
 	return (
@@ -18,11 +18,13 @@ const PleadgeCard = () => {
 						<>
 							<div className='pledge-card-container'>
 								<FigureInformaiton
-									figure='$89,914'
+									// Pleadge money
+									figure={fundsPleadged}
 									information='of $100,000 backed'></FigureInformaiton>
 								<hr className='pledge-card-divider'></hr>
 								<FigureInformaiton
-									figure='5007'
+									// total backers
+									figure={totalBackers}
 									information='total backers'></FigureInformaiton>
 								<hr className='pledge-card-divider'></hr>
 

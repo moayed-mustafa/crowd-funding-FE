@@ -9,63 +9,20 @@ import "../../index.css";
 import ModalComponent from "../modal-popup";
 import ModalPleadgeCard from "../modal-pledge-card";
 import mastercraftLogo from "../../assets/images/logo-mastercraft.svg";
-import FinalModal from "../final-modal";
 
-const ModalPleadgeData = [
-	{
-		val: "product-a",
-		title: "Pleadge with no reward",
-		description:
-			"Choose to support us without a reward if you simply believe in our project. As a backer, you will be signed up to receive product updates via email.",
-	},
-	{
-		val: "product-b",
-		title: "Bamboo Stand",
-		description:
-			"You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list.",
-		itemsLeft: 104,
-		amount: "pleadge 25$ or more",
-	},
-	{
-		val: "product-c",
-		title: "Black Edition Stand",
-		description:
-			"You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer member list. Shipping is included.",
-		itemsLeft: 64,
-		amount: "pleadge 75$ or more",
-	},
-	{
-		val: "product-d",
-		title: "Mahogny Special Edition",
-		description:
-			" You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to our Backer member list. Shipping is included.",
-		itemsLeft: 64,
-	},
-];
-
-const HeaderCard = () => {
+const HeaderCard = ({ModalPleadgeData}) => {
 	const mobile = useMediaQuery("(max-width:375px)");
-	// ! main modal state
-	const [openModal, setOpenModal] = useState(false);
-	const handleOpenModal = () => {
-		setOpenModal(!openModal);
-		if (!openModal) setSelected("");
-	};
-	//! secondary modal state
-	const [openThankyouModal, setOpenThankyouModal] = useState(false);
-	console.log("openModal state:", openModal);
-	console.log("openThankyouModal state:", openThankyouModal);
-	const handleOpenThankyouModal = () => {
-		setOpenThankyouModal(!openThankyouModal);
-		if (!openThankyouModal) setSelected("");
-	};
-	//! radio button state
+		//* radio button state
 	const [selected, setSelected] = useState("");
 	const handleChange = (e) => {
 		setSelected(e.target.value);
 		if (!openModal) setSelected("");
 	};
-	// TODO: make a function to clear the selected radio item
+	const [openModal, setOpenModal] = useState(false);
+	const handleOpenModal = () => {
+		setOpenModal(!openModal);
+		if (!openModal) setSelected("");
+	};
 
 	return (
 		<Row className='justify-content-center'>
@@ -106,16 +63,14 @@ const HeaderCard = () => {
 						key={idx}
 						val={item.val}
 						handleSelect={handleChange}
-						state={selected}
+						radioState={selected}
+						setSelected={setSelected}
 						title={item.title}
 						description={item.description}
 						amount={item.amount}
 						itemsLeft={item.itemsLeft}
-						handleClick={handleOpenThankyouModal}>
-						<FinalModal
-							show={openThankyouModal}
-							handleClick={handleOpenThankyouModal}
-						/>
+					>
+
 					</ModalPleadgeCard>
 				))}
 			</ModalComponent>
